@@ -33,7 +33,8 @@ public class Main {
         System.out.println("-----------------------------------------------------------------------------------");
 
         System.out.println("A particular Product");
-        Product p = service.getProduct("black beast");
+        Product p = service.getProduct("documents");
+
         System.out.println(p);
     }
 }
