@@ -5,6 +5,7 @@ public class ProductService {
 
     List<Product> products = new ArrayList<>();
     List<Product> productsByPlace = new ArrayList<>();
+    List<Product> productsByDate = new ArrayList<>();
 
     public void addProduct(Product p){
         products.add(p);
@@ -30,5 +31,14 @@ public class ProductService {
             }
         }
         return productsByPlace;
+    }
+
+    public List<Product> getProductByDate(int year) {
+        for(Product p : products){
+            if(p.getWarrenty() <= year){
+                productsByDate.add(p);
+            }
+        }
+        return productsByDate;
     }
 }

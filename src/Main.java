@@ -15,7 +15,7 @@ public class Main {
         service.addProduct(new Product("pad", "cable", "brown table", 2029));
         service.addProduct(new Product("cable", "cable", "black table", 2024));
         service.addProduct(new Product("black beast", "bag", "brown table", 2023));
-        service.addProduct(new Product("apple mouse", "mouse", "white table", 2022));
+        service.addProduct(new Product("apple mouse", "mouse", "white table", 2021));
         service.addProduct(new Product("my mouse", "mouse", "brown table", 2030));
         service.addProduct(new Product("charger", "charger", "white table", 2030));
         service.addProduct(new Product("mi 11 lite", "phone", "brown table", 2025));
@@ -37,11 +37,16 @@ public class Main {
 //
 //        System.out.println(p);
 
-        System.out.println("Search by place");
-        List<Product> products = service.getProductByPlace("brown table");
-        for(Product p : products){
-            System.out.println(p);
-        }
+//        System.out.println("Search by place");
+//        List<Product> products = service.getProductByPlace("brown table");
+//        for(Product p : products){
+//            System.out.println(p);
+//        }
+//        System.out.println("Expired Products");
+//        List<Product> products = service.getProductByDate(2022);
+//        for(Product p : products){
+//            System.out.println(p);
+//        }
 
     }
 }
