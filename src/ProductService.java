@@ -4,7 +4,6 @@ import java.util.List;
 public class ProductService {
 
     List<Product> products = new ArrayList<>();
-    List<Product> productsByPlace = new ArrayList<>();
     List<Product> productsByDate = new ArrayList<>();
 
     public void addProduct(Product p){
@@ -24,13 +23,20 @@ public class ProductService {
         return null;
     }
 
-    public List<Product> getProductByPlace(String placeName) {
+    public List<Product> getProductByText(String text) {
+        String str = text.toLowerCase();
+        List<Product> prods = new ArrayList<>();
+
         for(Product p : products){
-            if(p.getPlace().equals(placeName)){
-                productsByPlace.add(p);
+            String name = p.getName().toLowerCase();
+            String type = p.getType().toLowerCase();
+            String place = p.getPlace().toLowerCase();
+
+            if(name.contains(str) || type.contains(str) || place.contains(str)){
+                prods.add(p);
             }
         }
-        return productsByPlace;
+        return prods;
     }
 
     public List<Product> getProductByDate(int year) {
