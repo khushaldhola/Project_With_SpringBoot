@@ -4,6 +4,7 @@ import java.util.List;
 public class ProductService {
 
     List<Product> products = new ArrayList<>();
+    List<Product> productsByPlace = new ArrayList<>();
 
     public void addProduct(Product p){
         products.add(p);
@@ -20,5 +21,14 @@ public class ProductService {
             }
         }
         return null;
+    }
+
+    public List<Product> getProductByPlace(String placeName) {
+        for(Product p : products){
+            if(p.getPlace().equals(placeName)){
+                productsByPlace.add(p);
+            }
+        }
+        return productsByPlace;
     }
 }

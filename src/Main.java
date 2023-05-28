@@ -24,7 +24,7 @@ public class Main {
         service.addProduct(new Product("java book", "book", "white table", 2028));
         service.addProduct(new Product("ear buds", "buds", "brown table", 2069));
 
-        List<Product> products = service.getAllProducts();
+//        List<Product> products = service.getAllProducts();
 //        print all the products
 //        System.out.println(products);
 //        for(Product p : products){
@@ -32,9 +32,18 @@ public class Main {
 //        }
         System.out.println("-----------------------------------------------------------------------------------");
 
-        System.out.println("A particular Product");
-        Product p = service.getProduct("documents");
+//        System.out.println("A particular Product");
+//        Product p = service.getProduct("documents");
+//
+//        System.out.println(p);
 
-        System.out.println(p);
+        System.out.println("Search by place");
+        List<Product> products = service.getProductByPlace("brown table");
+        for(Product p : products){
+            System.out.println(p);
+        }
+
     }
 }
+// assign-1 what are things at any particular place
+// assign-2 which products are outdated
